@@ -44,7 +44,9 @@ as.numeric(pull(prob1_df, char_vec))
 as.numeric(pull(prob1_df, factor_vec))
 ```
 
+
 Convert the logical vector and then multiply the random sample by the result
+
 
 ```{r try_convert and multiply}
 as.numeric(pull(prob1_df, samp_gt_0)) * pull(prob1_df, samp)
@@ -56,8 +58,21 @@ as.numeric(as.factor(pull(prob1_df, samp_gt_0))) * pull(prob1_df, samp)
 ##Problem 2
 
 
+`r data("penguins", package = "palmerpenguins")`
+
+`r names(penguins) `
+Variables include "species", "island", "bill_length_mm", "bill_depth_mm", flipper_length_mm", "body_mass_g", "sex", and "year"             
+
+`r summary(penguins)`
+
+`r nrow(penguins)`
+`r ncol(penguins)`
+This data set has 344 rows and 8 columns, which means that this penguins data set has 344 observations of 8 variables.
 
 
+`r mean(pull(penguins, flipper_length_mm), na.rm=TRUE)`
+The mean flipper length calculated from existing values equals 200.92mm
 
+`r scatterplot <- ggplot(penguins, aes (x = bill_length_mm, y = flipper_length_mm, color = species)) + geom_point()`
 
 
