@@ -60,19 +60,19 @@ as.numeric(as.factor(pull(prob1_df, samp_gt_0))) * pull(prob1_df, samp)
 
 `r data("penguins", package = "palmerpenguins")`
 
-`r names(penguins) `
-Variables include "species", "island", "bill_length_mm", "bill_depth_mm", flipper_length_mm", "body_mass_g", "sex", and "year"             
 
-`r summary(penguins)`
-
-`r nrow(penguins)`
-`r ncol(penguins)`
-This data set has 344 rows and 8 columns, which means that this penguins data set has 344 observations of 8 variables.
+Variables include `r names(penguins)`     
 
 
-`r mean(pull(penguins, flipper_length_mm), na.rm=TRUE)`
-The mean flipper length calculated from existing values equals 200.92mm
+This data set has `r nrow(penguins)` rows and `r ncol(penguins)` columns, which means that this penguins data set has `r nrow(penguins)` observations of `r ncol(penguins)` variables.
 
-`r scatterplot <- ggplot(penguins, aes (x = bill_length_mm, y = flipper_length_mm, color = species)) + geom_point()`
+
+
+The mean flipper length calculated from existing values equals `r mean(pull(penguins, flipper_length_mm), na.rm=TRUE)`mm
+
+ 
+```{r}
+ggplot(penguins, aes (x = bill_length_mm, y = flipper_length_mm, na.rm=TRUE, color = species)) + geom_point()
+```
 
 
