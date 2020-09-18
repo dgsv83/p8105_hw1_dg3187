@@ -64,7 +64,7 @@ This penguins dataset has `r nrow(penguins)` rows and `r ncol(penguins)` columns
 
 Variables include `r names(penguins)`.     
 
-Out of the 344 penguins, `r length (filter(penguins, species == "Adelie") %>% pull(species))` of the penguins belong to the species of Adelie. `r length (filter(penguins, species == "Chinstrap") %>% pull(species))`are Chinstrap and `r length (filter(penguins, species == "Gentoo") %>% pull(species))`are Gentoo.
+Out of the 344 penguins, `r length (filter(penguins, species == "Adelie") %>% pull(species))` of the penguins belong to the species of Adelie. `r length (filter(penguins, species == "Chinstrap") %>% pull(species))` are Chinstrap and `r length (filter(penguins, species == "Gentoo") %>% pull(species))` are Gentoo.
 
 The smallest bill length is `r min(pull(penguins, bill_length_mm), na.rm=TRUE) `mm.
 The largest bill depth is `r max(pull(penguins, bill_length_mm), na.rm=TRUE) `mm.
