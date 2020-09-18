@@ -72,7 +72,8 @@ The mean flipper length calculated from existing values equals `r mean(pull(peng
 
  
 ```{r}
-ggplot(penguins, aes (x = bill_length_mm, y = flipper_length_mm, na.rm=TRUE, color = species)) + geom_point()
+scatterplot <- ggplot(penguins, aes (x = bill_length_mm, y = flipper_length_mm, na.rm=TRUE, color = species)) + geom_point()
 ```
 
+Export my first scatterplot to my project directory as a pdf file using ggsave`r ggsave("scatterplot.pdf", scatterplot, width = 3.5, height = 3.5) `.
 
